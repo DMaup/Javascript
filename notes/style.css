@@ -1,0 +1,77 @@
+body{
+    background-image:url(img/fond.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:100vh; /*force le body à 100% de la hauteur car les objets dedans sont en absolute */
+    margin:0;
+}
+#notes{
+    display:flex;
+    flex-direction:row;
+    align-items: stretch;
+    position:relative;
+}
+.note{
+    padding:10px;
+    margin:10px;
+    background-color:yellow;
+    flex: 0 0 250px;
+    position:relative;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+    -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+    transition-timing-function:ease;
+    transition-delay:1s;
+    transition: width 2s, height 4s;
+}
+#ajouter{
+    width:30px;
+    height:30px;
+    background-color:green;   
+    border-radius:30px;
+    position:absolute;
+    bottom:0px;
+    right:0px;
+}
+#saisie{
+    width:150px;
+    height:75px; 
+    position:absolute;
+    bottom:0px;
+    right:30px;
+}
+.supprimer{
+    position:absolute;
+    background-color:red;
+    width:30px;
+    height:30px;
+    border-radius:30px;
+    top:0px;
+    right:0px;
+}
+.pins_note{
+    background-image: url(img/punaise.gif);
+    background-size:contain;
+    background-repeat:no-repeat;
+    width:75px;
+    height:75px;   
+    left:50%;
+    margin-left:-25px;
+    position:absolute;
+}
+.titre_note{
+    font-size:30px;
+    font-style: bold;
+    padding:60px 10px 10px 10px;
+    text-align:center;
+}
+.desc_note{
+    font-size:20px;
+    padding:15px;    
+}
+.date_note{
+    font-style: italic;
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    padding:5px;        
+}

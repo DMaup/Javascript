@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>hello jquery</h1>
+
+    <div id="popup"> Welcome pop up </div>
+    <button id="open">open pop up</button>
+    <!-- colorpicker -->
+    <div id="color-rect"></div>
+    <input type="range" name="red"   id="red"   value=0 min=0 max=255></br>
+    <input type="range" name="green" id="green" value=0 min=0 max=255></br>
+    <input type="range" name="blue"  id="blue"  value=0 min=0 max=255>
+    <!-- diaporama -->
+    <div id="diaporama">
+        <div class="bg_img" id="img1"></div>
+        <div class="bg_img" id="img2"></div>
+        <div class="bg_img" id="img3"></div>
+        <div id="precsuiv">
+            <button id="prev" class="ps">Précédent</button>
+            <button id="next" class="ps">Suivant</button>
+        </div>
+    </div>
+    <div id="resolve">
+        <div class="icon" id="pc"></div>
+        <div class="icon" id="player"></div>
+        <div id="result"></div>
+    </div>
+    <div id="game">
+        <div class="icon shi" id="shi"></div>
+        <div class="icon fu" id="fu"></div>
+        <div class="icon mi" id="mi"></div>
+    </div>
+<!-- /* Morpion */ -->
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>            
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>            
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>            
+        </tr>
+    </table>
+<!-- memory -->
+<div id="memory">
+    <div class="item">
+        <div class="verso"></div>
+        <div class="recto"></div>
+    </div>
+    <div class="item">
+        <div class="verso"></div>
+        <div class="recto"></div>
+    </div>
+    <div class="item">
+        <div class="verso"></div>
+        <div class="recto"></div>
+    </div>
+    <div class="item">
+        <div class="verso"></div>
+        <div class="recto"></div>
+    </div>
+    <div class="item">
+        <div class="verso"></div>
+        <div class="recto"></div>
+    </div>
+    <div class="item">
+        <div class="verso"></div>
+        <div class="recto"></div>
+    </div>
+    <div class="item">
+        <div class="verso"></div>
+        <div class="recto"></div>
+    </div>
+    <div class="item">
+        <div class="verso"></div>
+        <div class="recto"></div>
+    </div>
+    <div class="item">
+        <div class="verso"></div>
+        <div class="recto"></div>
+    </div>
+    <div class="item">
+        <div class="verso"></div>
+        <div class="recto"></div>
+    </div>
+    <div class="item">
+        <div class="verso"></div>
+        <div class="recto"></div>
+    </div>
+    <div class="item">
+        <div class="verso"></div>
+        <div class="recto"></div>
+    </div>
+    </div>
+    </br>
+    <div id="score"></div>
+</div>
+<!-- Filtre -->
+<div id="container">
+    <aside id="filter">
+        <h2>Trier</h2>
+        <label>Marque: </label>
+        <Select name="mark" id="mark">
+            <option value="all">Toutes</option>
+            <option value="peugeot">Peugeot</option>
+            <option value="renault">Renault</option>
+            <option value="porsche">Porsche</option>            
+        </Select>
+        </br>
+        <h3>Couleur: </h3>
+            <label>Rouge</label><input type="checkbox" name="red" id="red" value="red"></Select><br>
+            <label>Bleu</label><input type="checkbox" name="blue" id="blue" value="blue"></Select><br>
+            <label>Jaune</label><input type="checkbox" name="yellow" id="yellow" value="yellow"></Select><br>
+            <label>Rose</label><input type="checkbox" name="pink" id="pink" value="pink"></Select><br>
+        </br>
+        <label>Prix minimum</label><br>
+            <input type="range" name="min_price" id="min_price" min=0 max=80000 step=500 value=80000>
+            <span id="display_min_price">0</span>
+        <br>
+        <label>Prix maximum</label><br>
+            <input type="range" name="max_price" id="max_price" min=0 max=80000 step=500 value=80000>
+            <span id="display_max_price">80000</span>        
+    </aside>
+    <div id="cars">
+        <div 
+            class="car" 
+            data-mark="peugeot" 
+            data-color="red" 
+            data-price="5000">
+            <div class="img-container">
+                <img src="imgs/peugeotrouge.jpg" alt="">
+            </div>
+            <ul class="caract">
+                    <li>marque: Peugeot</li>
+                    <li>couleur : rouge</li>
+                    <li>prix : 5000</li>
+            </ul>
+        </div>
+        <div 
+            class="car" 
+            data-mark="renault" 
+            data-color="yellow" 
+            data-price="3000">
+            <div class="img-container">
+                <img src="imgs/renaultjaune.jpg" alt="">
+            </div>
+            <ul class="caract">
+                    <li>marque: Renault</li>
+                    <li>couleur : jaune</li>
+                    <li>prix : 3000</li>
+            </ul>
+        </div>
+        <div 
+            class="car" 
+            data-mark="renault" 
+            data-color="blue" 
+            data-price="2000">
+            <div class="img-container">
+                <img src="imgs/renaultbleu.jpg" alt="">
+            </div>
+            <ul class="caract">
+                    <li>marque: Renault</li>
+                    <li>couleur : bleu</li>
+                    <li>prix : 2000</li>
+            </ul>
+        </div>
+        <div 
+            class="car" 
+            data-mark="porsche" 
+            data-color="pink" 
+            data-price="50000">
+            <div class="img-container">
+                <img src="imgs/porscherose.jpg" alt="">
+            </div>
+            <ul class="caract">
+                    <li>marque: Porsche</li>
+                    <li>couleur : rose</li>
+                    <li>prix : 50000</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- generation d'elements -->
+
+<form>
+    <input type="text" name="shop-item" id="shop-item" placeholder="Nom">
+    <input type="text" name="shop-price" id="shop-price" placeholder="Prix">
+    <input type="submit" value="Ajouter">
+</form>
+<ul id="cart">
+    <li>
+        <div class="item_container">
+            <h6>Tomates</h6>
+            <p>2€/kg</p>
+        </div>
+    </li>
+</ul>
+
+<!-- Chargement jquery Attention à l'ordre de chargement d'abord Jquery puis le script--> 
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

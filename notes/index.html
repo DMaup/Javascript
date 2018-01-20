@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="notes">
+        <div class="note">
+            <div    class="pins_note"   ></div>
+            <div    class="titre_note"  ></div>
+            <div    class="desc_note"   ></div>
+            <a      class="date_note"   ></a>
+            <button type="button" class="supprimer">x</button>
+        </div>
+    </div>
+    <button type="button" id="ajouter">+</button>
+    <div id="saisie">
+        <form id="form">
+                <input type="text" id="titre" name="titre" placeholder = "Titre"><br>
+                <input type="text" id="desc" name="desc" placeholder = "Description"><br>
+                <input type="submit" id="valider" value="valider">
+        </form>
+    </div>
+    <!-- Chargement jquery Attention à l'ordre de chargement d'abord Jquery puis le script--> 
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

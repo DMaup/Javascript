@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>javascript</h1>
+    <div id="test">test</div>
+    <div class="test2">test2</div>
+    <div class="test2">test2 bis</div>
+    <div id="popup">ceci est une fenetre pop up</div>
+    <fieldset>
+        <label>Username</label>
+        <input type="text" name ="username" id="username">
+        <input type="submit" value ="valider">
+        <br>
+
+        <label>R</label>
+        <input type="range" name="red" id="red" min=0 max=255>
+        <label>G</label>
+        <input type="range" name="green" id="green" min=0 max=255>
+        <label>B</label>
+        <input type="range" name="blue" id="blue" min=0 max=255>
+<!--validation de formulaire-->
+        <label>
+            <h6>Username</h6>
+            <input type="text" name="username" id="name">
+            <p class="error"></p>
+        </label>
+        <label>
+            <h6>Password</h6>
+            <input type="text" name="password" id="password">
+            <p class="error"></p>
+        </label>
+        <label>
+            <h6>Password confirmation</h6>
+            <input type="text" name="password_confirm" id="password_confirm">
+            <p class="error"></p>
+        </label>
+        <h6>Code postal</h6>
+            <input type="text" name="cp" id="cp">
+            <p class="error"></p>
+        </label>
+        <input type="submit" value="Envoyer" id="send_form">
+    </fieldset>
+<!--mouse event-->
+
+<div id="game">
+    <div id="carre"></div>
+</div>
+
+<!-- keyboard event -->
+
+    <div id="cargame">
+        <div id="car"></div>
+    </div>
+
+    <div id="msg"></div>
+    <div id="couleur"></div>
+    <button id="action">Click Me!</button>   
+
+<!-- chronometre -->
+
+<button id="chrono">Start</button>
+<div id="time"></div>
+
+<!-- Generation d'Element -->
+<H4>Liste de courses</H4>
+<form>
+    <input type="text" id="shop-item">
+    <input type="submit" id="shop-add" value="ajouter">
+</form>
+<ul id="list"></ul>
+
+
+
+<!-- Jaascript load    -->
+    <script src='app.js'></script>
+</body>
+</html>
